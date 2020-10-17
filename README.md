@@ -35,10 +35,12 @@ meetup with their friends through using the location data embedded in their mess
 * When looking to talk to a friend user takes app and messages them
 * When the user needs to communicate to team members
 
-# Work Distribution: We will separate the parts into phases. As of now we will have at least 3 phases minimum in this project.
+# Work Distribution: 
+We will separate the parts into phases. As of now we will have at least 3 phases minimum in this project.
 
-## Phase 1 -: Setup project/git								- Together
+## Phase 1 - Setup
 
+* Setup project/git	- Together
 * Create Temp UI	-  Chester
 * Login
 * Register
