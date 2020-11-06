@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94774FAA2551FD920060532D /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94774FA92551FD920060532D /* SignInView.swift */; };
 		94D7F3802537EAF200783181 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D7F37F2537EAF200783181 /* AppDelegate.swift */; };
 		94D7F3822537EAF200783181 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D7F3812537EAF200783181 /* SceneDelegate.swift */; };
 		94D7F3842537EAF200783181 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D7F3832537EAF200783181 /* ContentView.swift */; };
@@ -14,9 +15,13 @@
 		94D7F3892537EAF200783181 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94D7F3882537EAF200783181 /* Assets.xcassets */; };
 		94D7F38C2537EAF200783181 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94D7F38B2537EAF200783181 /* Preview Assets.xcassets */; };
 		94D7F38F2537EAF200783181 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94D7F38D2537EAF200783181 /* LaunchScreen.storyboard */; };
+		94DE9F032554B088002B5E3A /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE9F022554B088002B5E3A /* SignUpView.swift */; };
+		94DE9F062554B3DE002B5E3A /* ChatRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE9F052554B3DE002B5E3A /* ChatRoomView.swift */; };
+		94DE9F092554ED76002B5E3A /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DE9F082554ED76002B5E3A /* MainMenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		94774FA92551FD920060532D /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		94D7F37C2537EAF200783181 /* Shat-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shat-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D7F37F2537EAF200783181 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94D7F3812537EAF200783181 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +31,9 @@
 		94D7F38B2537EAF200783181 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		94D7F38E2537EAF200783181 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94D7F3902537EAF200783181 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94DE9F022554B088002B5E3A /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		94DE9F052554B3DE002B5E3A /* ChatRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomView.swift; sourceTree = "<group>"; };
+		94DE9F082554ED76002B5E3A /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +47,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		94774FA82551FD6F0060532D /* views */ = {
+			isa = PBXGroup;
+			children = (
+				94D7F3832537EAF200783181 /* ContentView.swift */,
+				94774FA92551FD920060532D /* SignInView.swift */,
+				94DE9F022554B088002B5E3A /* SignUpView.swift */,
+				94DE9F052554B3DE002B5E3A /* ChatRoomView.swift */,
+				94DE9F082554ED76002B5E3A /* MainMenuView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
 		94D7F3732537EAF200783181 = {
 			isa = PBXGroup;
 			children = (
@@ -58,9 +78,9 @@
 		94D7F37E2537EAF200783181 /* Shat-App */ = {
 			isa = PBXGroup;
 			children = (
+				94774FA82551FD6F0060532D /* views */,
 				94D7F37F2537EAF200783181 /* AppDelegate.swift */,
 				94D7F3812537EAF200783181 /* SceneDelegate.swift */,
-				94D7F3832537EAF200783181 /* ContentView.swift */,
 				94D7F3882537EAF200783181 /* Assets.xcassets */,
 				94D7F38D2537EAF200783181 /* LaunchScreen.storyboard */,
 				94D7F3902537EAF200783181 /* Info.plist */,
@@ -150,8 +170,12 @@
 			files = (
 				94D7F3802537EAF200783181 /* AppDelegate.swift in Sources */,
 				94D7F3872537EAF200783181 /* Shat_App.xcdatamodeld in Sources */,
+				94DE9F092554ED76002B5E3A /* MainMenuView.swift in Sources */,
 				94D7F3822537EAF200783181 /* SceneDelegate.swift in Sources */,
 				94D7F3842537EAF200783181 /* ContentView.swift in Sources */,
+				94DE9F062554B3DE002B5E3A /* ChatRoomView.swift in Sources */,
+				94DE9F032554B088002B5E3A /* SignUpView.swift in Sources */,
+				94774FAA2551FD920060532D /* SignInView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
