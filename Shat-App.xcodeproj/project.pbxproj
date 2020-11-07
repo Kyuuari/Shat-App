@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01541FBA25573E3600617033 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01541FB925573E3600617033 /* GoogleService-Info.plist */; };
+		17D34B115BB1B5B22F2F6949 /* Pods_Shat_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E7DABD392062AC888C3CCE /* Pods_Shat_App.framework */; };
 		94774FAA2551FD920060532D /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94774FA92551FD920060532D /* SignInView.swift */; };
 		94D7F3802537EAF200783181 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D7F37F2537EAF200783181 /* AppDelegate.swift */; };
 		94D7F3822537EAF200783181 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D7F3812537EAF200783181 /* SceneDelegate.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01541FB925573E3600617033 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7971487AFAF80529A38173F8 /* Pods-Shat-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shat-App.release.xcconfig"; path = "Target Support Files/Pods-Shat-App/Pods-Shat-App.release.xcconfig"; sourceTree = "<group>"; };
 		94774FA92551FD920060532D /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		94D7F37C2537EAF200783181 /* Shat-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shat-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D7F37F2537EAF200783181 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +38,8 @@
 		94DE9F022554B088002B5E3A /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		94DE9F052554B3DE002B5E3A /* ChatRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomView.swift; sourceTree = "<group>"; };
 		94DE9F082554ED76002B5E3A /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
+		A4E7DABD392062AC888C3CCE /* Pods_Shat_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shat_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBD1C212421ACD7D3FB4BFF4 /* Pods-Shat-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shat-App.debug.xcconfig"; path = "Target Support Files/Pods-Shat-App/Pods-Shat-App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,12 +47,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17D34B115BB1B5B22F2F6949 /* Pods_Shat_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56D3A9A4E368D42C8D21DAE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4E7DABD392062AC888C3CCE /* Pods_Shat_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		94774FA82551FD6F0060532D /* views */ = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +79,8 @@
 			children = (
 				94D7F37E2537EAF200783181 /* Shat-App */,
 				94D7F37D2537EAF200783181 /* Products */,
+				F3BDA5873F75D6E48CBD59A0 /* Pods */,
+				56D3A9A4E368D42C8D21DAE4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +101,7 @@
 				94D7F3882537EAF200783181 /* Assets.xcassets */,
 				94D7F38D2537EAF200783181 /* LaunchScreen.storyboard */,
 				94D7F3902537EAF200783181 /* Info.plist */,
+				01541FB925573E3600617033 /* GoogleService-Info.plist */,
 				94D7F3852537EAF200783181 /* Shat_App.xcdatamodeld */,
 				94D7F38A2537EAF200783181 /* Preview Content */,
 			);
@@ -98,6 +116,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		F3BDA5873F75D6E48CBD59A0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BBD1C212421ACD7D3FB4BFF4 /* Pods-Shat-App.debug.xcconfig */,
+				7971487AFAF80529A38173F8 /* Pods-Shat-App.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,9 +132,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94D7F3932537EAF200783181 /* Build configuration list for PBXNativeTarget "Shat-App" */;
 			buildPhases = (
+				6FBA7CE576656412F72F8FB5 /* [CP] Check Pods Manifest.lock */,
 				94D7F3782537EAF200783181 /* Sources */,
 				94D7F3792537EAF200783181 /* Frameworks */,
 				94D7F37A2537EAF200783181 /* Resources */,
+				8C2067E647169BCCB2AED3CC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,12 +185,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				94D7F38F2537EAF200783181 /* LaunchScreen.storyboard in Resources */,
+				01541FBA25573E3600617033 /* GoogleService-Info.plist in Resources */,
 				94D7F38C2537EAF200783181 /* Preview Assets.xcassets in Resources */,
 				94D7F3892537EAF200783181 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6FBA7CE576656412F72F8FB5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Shat-App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C2067E647169BCCB2AED3CC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shat-App/Pods-Shat-App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shat-App/Pods-Shat-App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Shat-App/Pods-Shat-App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		94D7F3782537EAF200783181 /* Sources */ = {
@@ -311,6 +383,7 @@
 		};
 		94D7F3942537EAF200783181 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBD1C212421ACD7D3FB4BFF4 /* Pods-Shat-App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -332,6 +405,7 @@
 		};
 		94D7F3952537EAF200783181 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7971487AFAF80529A38173F8 /* Pods-Shat-App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
