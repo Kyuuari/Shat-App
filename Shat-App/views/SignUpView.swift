@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct SignUpView: View {
-    
+    @ObservedObject var session: CurrentSessionViewModel
+    @Environment(\.presentationMode) var presentationMode
+
+    @State private var name:String = ""
     @State private var email:String = ""
     @State private var password: String = ""
+    @State private var confirmPassword: String = ""
     @State private var rememberMe: Bool = true
     @State private var selection: Int? = nil
     @State private var invalidLogin: Bool = false
@@ -23,16 +27,23 @@ struct SignUpView: View {
                     Form{
                         
                         Section(header:Text("Information")){
-                            TextField("Name", text: self.$email)
+                            TextField("Name", text: self.$name)
                             TextField("Email", text: self.$email)
                                 .autocapitalization(.none)
                             SecureField("Password", text: self.$password)
-                            SecureField("Renter Password", text: self.$password)
+                            SecureField("Renter Password", text: self.$confirmPassword)
                         }
                         
                         
                         Button(action: {
-                            
+                            session.signUp(email: email, password: password){ (result, error) in
+                                if error != nil {
+                                    print(#function, "Error: ", error!)
+                                }else{
+                                    self.presentationMode.wrappedValue.dismiss()
+                                }
+                                
+                            }
                         }){
                             Text("Submit")
                         }
@@ -49,6 +60,6 @@ struct SignUpView: View {
 
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpView()
+        SignUpView(session: CurrentSessionViewModel())
     }
 }

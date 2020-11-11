@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct SignInView: View {
-    
+    @ObservedObject var session: CurrentSessionViewModel
     
     @State private var email:String = ""
     @State private var password: String = ""
     @State private var rememberMe: Bool = true
     @State private var selection: Int? = nil
     @State private var invalidLogin: Bool = false
+    @State private var signUpPressed: Bool = false
     
     var body: some View {
         NavigationView{
@@ -37,15 +38,27 @@ struct SignInView: View {
                         
                         
                         Button(action: {
-                            self.selection = 1
+                            session.signIn(email: email, password: password){ (result, error) in
+                                if error != nil {
+                                    print(#function, "Error: ", error!)
+                                }else{
+                                    self.email = ""
+                                    self.password = ""
+                                    self.selection = 1
+                                }
+                                
+                            }
                         }){
                             Text("Sign In")
                         }
                         
                         Button(action: {
-                            
+                            self.signUpPressed = true
+                            print("SignUp Button pressed")
                         }){
                             Text("Sign Up")
+                        }.sheet(isPresented: $signUpPressed){
+                            SignUpView(session: CurrentSessionViewModel())
                         }
                     }//Form
                 }
@@ -55,10 +68,13 @@ struct SignInView: View {
         }//NavigationView
         
     }//View
+    func getUser(){
+        session.listen()
+    }
 }
 
 struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
-        SignInView()
+        SignInView(session: CurrentSessionViewModel())
     }
 }
