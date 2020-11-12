@@ -32,13 +32,12 @@ class CurrentSessionViewModel: ObservableObject{
     func signIn(email: String, password: String, handler: @escaping AuthDataResultCallback){
         Auth.auth().signIn(withEmail: email, password: password, completion: handler)
     }
-    func signOut () -> Bool {
+    func signOut () {
         do{
             try Auth.auth().signOut()
             self.session = nil
-            return true
         }catch{
-            return false
+            return
         }
     }
     

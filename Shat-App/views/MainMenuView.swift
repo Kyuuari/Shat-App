@@ -50,7 +50,8 @@ struct HistoryRow : View {
 }
 
 struct MainMenuView: View {
-    
+    @EnvironmentObject var session : CurrentSessionViewModel
+    @Environment(\.presentationMode) var presentationMode
     @State private var selection: Int? = nil
     
     @State var history = [
@@ -90,15 +91,27 @@ struct MainMenuView: View {
                 }
                 // that's the height of the HStack
                 .navigationBarTitle("")
-                .navigationBarHidden(true)
+                .toolbar{
+                    ToolbarItem(placement: .navigationBarTrailing){
+                        Menu{
+                            Button("Sign Out", action: self.logout)
+                        }label:{
+                            Image(systemName: "gear")
+                        }
+                    }
+                }
                 
                 
             }//VStack
             .navigationBarTitle("Chat History")
             .navigationBarBackButtonHidden(true)
-         
+            
 //        }//NavigationView
 
+    }
+    func logout(){
+        self.session.signOut()
+        self.presentationMode.wrappedValue.dismiss()
     }
 }
 

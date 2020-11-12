@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SignUpView: View {
-    @ObservedObject var session: CurrentSessionViewModel
+    @EnvironmentObject var session : CurrentSessionViewModel
     @Environment(\.presentationMode) var presentationMode
 
     @State private var name:String = ""
@@ -60,6 +60,6 @@ struct SignUpView: View {
 
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpView(session: CurrentSessionViewModel())
+        SignUpView()
     }
 }

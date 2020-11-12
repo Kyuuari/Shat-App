@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SignInView: View {
-    @ObservedObject var session: CurrentSessionViewModel
+    @EnvironmentObject var session : CurrentSessionViewModel
     
     @State private var email:String = ""
     @State private var password: String = ""
@@ -58,7 +58,7 @@ struct SignInView: View {
                         }){
                             Text("Sign Up")
                         }.sheet(isPresented: $signUpPressed){
-                            SignUpView(session: CurrentSessionViewModel())
+                            SignUpView()
                         }
                     }//Form
                 }
@@ -75,6 +75,6 @@ struct SignInView: View {
 
 struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
-        SignInView(session: CurrentSessionViewModel())
+        SignInView()
     }
 }
