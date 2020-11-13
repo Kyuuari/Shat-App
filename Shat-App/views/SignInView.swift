@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct SignInView: View {
     @EnvironmentObject var session : CurrentSessionViewModel
-    
+    let user = Auth.auth().currentUser
     @State private var email:String = ""
     @State private var password: String = ""
     @State private var rememberMe: Bool = true
@@ -63,6 +64,12 @@ struct SignInView: View {
                     }//Form
                 }
             }//Vstack
+            .onAppear(){
+                if(user != nil){
+                    self.selection = 1
+                }
+                
+            }
             .navigationBarTitle("Shat-App", displayMode: .inline)
             
         }//NavigationView
