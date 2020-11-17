@@ -10,7 +10,6 @@ import SwiftUI
 struct SignUpView: View {
     @EnvironmentObject var session : CurrentSessionViewModel
     @Environment(\.presentationMode) var presentationMode
-
     @State private var name:String = ""
     @State private var email:String = ""
     @State private var password: String = ""
@@ -40,8 +39,13 @@ struct SignUpView: View {
                                 if error != nil {
                                     print(#function, "Error: ", error!)
                                 }else{
+                                    var newUser = User()
+                                    newUser.email = self.email
+                                    newUser.displayName = self.name
+                                    session.insertUser(newUser: newUser)
                                     self.presentationMode.wrappedValue.dismiss()
                                 }
+                                
                                 
                             }
                         }){
