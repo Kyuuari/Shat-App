@@ -6,11 +6,9 @@
 //
 
 import SwiftUI
-import Firebase
 
 struct SignInView: View {
     @EnvironmentObject var session : CurrentSessionViewModel
-    let user = Auth.auth().currentUser
     @State private var email:String = ""
     @State private var password: String = ""
     @State private var rememberMe: Bool = true
@@ -43,6 +41,14 @@ struct SignInView: View {
                                 if error != nil {
                                     print(#function, "Error: ", error!)
                                 }else{
+                                    UserDefaults.standard.setValue(self.rememberMe, forKey: "COM_SHATAPP")
+                                    if(self.rememberMe){
+                                        UserDefaults.standard.setValue(self.email, forKey: "KEY_EMAIL")
+                                        UserDefaults.standard.setValue(self.password, forKey: "COM_SHATAPP_PASSWORD")
+                                    }else{
+                                        UserDefaults.standard.removeObject(forKey: "KEY_EMAIL")
+                                        UserDefaults.standard.removeObject(forKey: "COM_SHATAPP_PASSWORD")
+                                    }
                                     self.email = ""
                                     self.password = ""
                                     self.selection = 1
@@ -65,19 +71,16 @@ struct SignInView: View {
                 }
             }//Vstack
             .onAppear(){
-                if(user != nil){
-                    self.selection = 1
-                }
-                
+                self.email = UserDefaults.standard.string(forKey: "KEY_EMAIL") ?? ""
+                self.password = UserDefaults.standard.string(forKey: "COM_SHATAPP_PASSWORD") ?? ""
+                self.rememberMe = UserDefaults.standard.bool(forKey: "COM_SHATAPP")
             }
             .navigationBarTitle("Shat-App", displayMode: .inline)
             
         }//NavigationView
         
     }//View
-    func getUser(){
-        session.listen()
-    }
+    
 }
 
 struct SignInView_Previews: PreviewProvider {

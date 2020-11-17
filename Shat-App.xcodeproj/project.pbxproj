@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01F15C6225620E010030723B /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F15C6125620E010030723B /* UserProfileView.swift */; };
 		01F30B6A255B4C6800145ED6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F30B69255B4C6800145ED6 /* User.swift */; };
 		01F30B6E255B4D8C00145ED6 /* CurrentSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F30B6D255B4D8C00145ED6 /* CurrentSessionViewModel.swift */; };
 		01F30B73255B635800145ED6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01F30B72255B635700145ED6 /* GoogleService-Info.plist */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01F15C6125620E010030723B /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		01F30B69255B4C6800145ED6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		01F30B6D255B4D8C00145ED6 /* CurrentSessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentSessionViewModel.swift; sourceTree = "<group>"; };
 		01F30B72255B635700145ED6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				94DE9F022554B088002B5E3A /* SignUpView.swift */,
 				94DE9F052554B3DE002B5E3A /* ChatRoomView.swift */,
 				94DE9F082554ED76002B5E3A /* MainMenuView.swift */,
+				01F15C6125620E010030723B /* UserProfileView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				94D7F3822537EAF200783181 /* SceneDelegate.swift in Sources */,
 				94D7F3842537EAF200783181 /* ContentView.swift in Sources */,
 				01F30B6A255B4C6800145ED6 /* User.swift in Sources */,
+				01F15C6225620E010030723B /* UserProfileView.swift in Sources */,
 				94DE9F062554B3DE002B5E3A /* ChatRoomView.swift in Sources */,
 				94DE9F032554B088002B5E3A /* SignUpView.swift in Sources */,
 				94774FAA2551FD920060532D /* SignInView.swift in Sources */,

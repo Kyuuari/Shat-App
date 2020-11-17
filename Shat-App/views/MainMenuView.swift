@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct ChatHistory : Hashable {
     var id = UUID()
@@ -53,7 +54,6 @@ struct MainMenuView: View {
     @EnvironmentObject var session : CurrentSessionViewModel
     @Environment(\.presentationMode) var presentationMode
     @State private var selection: Int? = nil
-    
     @State var history = [
         ChatHistory(avatar: "Tim",partner: "Tom",message: "Hello"),
         ChatHistory(avatar: "Tim",partner: "Bob",message: "My name is Bob I'm looking to work with you"),
@@ -75,6 +75,9 @@ struct MainMenuView: View {
             VStack{
                 ScrollView {
                     NavigationLink(destination: ChatRoomView(), tag: 2, selection: $selection){}
+                    NavigationLink(
+                        destination: UserProfileView(), tag: 3,
+                        selection: $selection){}
                     
                     LazyVStack {
                         ForEach(history, id: \.self) { log in
@@ -94,6 +97,9 @@ struct MainMenuView: View {
                 .toolbar{
                     ToolbarItem(placement: .navigationBarTrailing){
                         Menu{
+                            Button("Profile", action:{
+                                self.selection = 3
+                            })
                             Button("Sign Out", action: self.logout)
                         }label:{
                             Image(systemName: "gear")
@@ -105,7 +111,8 @@ struct MainMenuView: View {
             }//VStack
             .navigationBarTitle("Chat History")
             .navigationBarBackButtonHidden(true)
-            
+            .onAppear(){
+            }
 //        }//NavigationView
 
     }

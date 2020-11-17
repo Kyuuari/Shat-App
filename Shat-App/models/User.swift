@@ -6,15 +6,19 @@
 //
 
 import Foundation
+import Firebase
+import FirebaseFirestoreSwift
 
-class User {
-    var uid: String
+struct User : Codable, Hashable{
+    @DocumentID var uid = UUID().uuidString
     var email: String?
-    var name: String?
+    var displayName: String?
+    
+    init(){}
     
     init(uid: String, name: String?, email: String?){
         self.uid = uid
-        self.name = name
+        self.displayName = name
         self.email = email
     }
 }
