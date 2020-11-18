@@ -67,3 +67,8 @@ We will separate the parts into phases. As of now we will have at least 3 phases
 ## Phase 4 - Optional Features
 
 * Adding additional features if fits.
+
+## Screenshots
+
+### Sign In
+<img width="456" alt="Screen Shot 2020-11-13 at 9 31 17 AM" src="https://user-images.githubusercontent.com/49799250/99578111-4b556980-29aa-11eb-85ac-033f343020f0.png">
