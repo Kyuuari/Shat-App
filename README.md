@@ -74,14 +74,14 @@ We will separate the parts into phases. As of now we will have at least 3 phases
 <img src="https://user-images.githubusercontent.com/49799250/99713958-f7628780-2a72-11eb-92fa-9d81c1891ec0.png" width="414" height="896">
 
 ### Sign Up
-![SignUpView](https://user-images.githubusercontent.com/49799250/99713967-f92c4b00-2a72-11eb-979a-2217f80a6382.png)
+<img src="https://user-images.githubusercontent.com/49799250/99713967-f92c4b00-2a72-11eb-979a-2217f80a6382.png" width="414" height="896">
 
 ### Chat Rooms the user has made
-![MainPageView](https://user-images.githubusercontent.com/49799250/99713972-fc273b80-2a72-11eb-9e70-8ef808fbf01d.png)
+<img src="https://user-images.githubusercontent.com/49799250/99713972-fc273b80-2a72-11eb-9e70-8ef808fbf01d.png" width="414" height="896">
 
 ### Chat Room
-![ChatRoomView](https://user-images.githubusercontent.com/49799250/99713989-021d1c80-2a73-11eb-966b-6b71dd92e834.png)
+<img src="https://user-images.githubusercontent.com/49799250/99713989-021d1c80-2a73-11eb-966b-6b71dd92e834.png" width="414" height="896">
 
 ### User Profile Template
-![UserProfileView](https://user-images.githubusercontent.com/49799250/99713981-00535900-2a73-11eb-9c07-8d8cd3b08eac.png)
+<img src="https://user-images.githubusercontent.com/49799250/99713981-00535900-2a73-11eb-9c07-8d8cd3b08eac.png" width="414" height="896">
 
