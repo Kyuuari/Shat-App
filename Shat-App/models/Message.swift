@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import MessageKit
 
-struct Message: Identifiable {
+struct Message: Identifiable, Codable {
     
     var id: String = UUID().uuidString
     var content: String

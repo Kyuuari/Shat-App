@@ -35,13 +35,15 @@ class ChatViewModel: ObservableObject {
       }
     }
     
+    let msg = Message(content: "123",created: "2 Nov",senderID:"001",senderName:"Brendon")
+    
+    
     func sendData(){
-        db.collection("Messages").add({
-            content: "Tokyo",
-            created: "Today",
-            senderID: "01",
-            senderName: "Brendon"
-        });
+        do {
+            try db.collection("Message").document("test").setData(from: msg)
+        } catch let error {
+            print("Error writing city to Firestore: \(error)")
+        }
     }
     
 
