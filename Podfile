@@ -8,11 +8,19 @@ target 'Shat-App' do
   # Pods for Shat-App
 
   	pod 'Firebase'
+    
+    
+    pod 'Firebase/Core'
 
   	pod 'Firebase/Auth'
 
   	pod 'Firebase/Firestore'
 
-	pod 'FirebaseFirestoreSwift'
+    pod 'FirebaseFirestoreSwift'
+ 
+    pod 'Firebase/Database'
+    
+    pod 'MessageKit'
+
 
 end

@@ -28,6 +28,8 @@ class CurrentSessionViewModel: ObservableObject{
             }
         }
     }
+    
+    
     func insertUser(newUser : User){
         do{
             _ = try db.collection(DB_NAME).addDocument(from: newUser)

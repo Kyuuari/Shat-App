@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SignInView: View {
     @EnvironmentObject var session : CurrentSessionViewModel
+    @EnvironmentObject var chat : ChatViewModel
     @State private var email:String = ""
     @State private var password: String = ""
     @State private var rememberMe: Bool = true
@@ -66,6 +67,15 @@ struct SignInView: View {
                             Text("Sign Up")
                         }.sheet(isPresented: $signUpPressed){
                             SignUpView()
+                        }
+                        
+                        Button(action: {
+                            self.signUpPressed = true
+                            print("SignUp Button pressed")
+                        }){
+                            Text("test")
+                        }.sheet(isPresented: $signUpPressed){
+                            ContentView()
                         }
                     }//Form
                 }
