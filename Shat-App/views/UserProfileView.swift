@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct UserProfileView: View {
-    let gradient = Gradient(colors: [.gray,.purple])
+    @EnvironmentObject var session : CurrentSessionViewModel
+//    let userInfo = session.currentUser?.providerData[indexPath.row]
+//    let gradient = Gradient(colors: [.gray,.purple])
     var body: some View {
         VStack{
             Spacer()
@@ -16,7 +18,7 @@ struct UserProfileView: View {
                 Spacer()
                 VStack{
                     //Eventually Have an Image that will use the Camera or Photo Library
-                    Text("User Profile").padding() // plan to use the user's actual name
+                    Text("User Profile \(session.getUser()!)").padding() // plan to use the user's actual name
                     Section(header: Text("User Options")){
                         Button(action: {
                             print("Edit User Pressed")
@@ -36,7 +38,7 @@ struct UserProfileView: View {
             }
             Spacer()
         }
-        .background(LinearGradient(gradient: gradient, startPoint: .top, endPoint: .bottom))
+//        .background(LinearGradient(gradient: gradient, startPoint: .top, endPoint: .bottom))
         .ignoresSafeArea()
         .navigationTitle("Your Profile")
     }

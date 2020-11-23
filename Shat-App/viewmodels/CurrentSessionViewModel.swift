@@ -55,10 +55,29 @@ class CurrentSessionViewModel: ObservableObject{
             return
         }
     }
-    
     func unbind() {
         if let handle = handle{
             Auth.auth().removeStateDidChangeListener(handle)
         }
+    }
+    func getUser() -> String?{
+        let user = Auth.auth().currentUser
+
+        let docRef = db.collection("Users").document("\(user!.uid)")
+
+        print(user!.uid)
+
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                print("Document data: \(dataDescription)")
+            } else {
+                print("Document does not exist")
+            }
+        }
+                
+
+        
+        return user?.uid
     }
 }
