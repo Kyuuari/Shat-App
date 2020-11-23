@@ -30,6 +30,8 @@ struct SignUpView: View {
                             TextField("Name", text: self.$name)
                             TextField("Email", text: self.$email)
                                 .autocapitalization(.none)
+//                            SecureField("Password", text: self.$password)
+//                            SecureField("Renter Password", text: self.$confirmPassword)
                             TextField("Password", text: self.$password)
                             TextField("Renter Password", text: self.$confirmPassword)
                         }
