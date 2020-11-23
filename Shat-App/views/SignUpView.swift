@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct SignUpView: View {
     @EnvironmentObject var session : CurrentSessionViewModel
@@ -29,8 +30,8 @@ struct SignUpView: View {
                             TextField("Name", text: self.$name)
                             TextField("Email", text: self.$email)
                                 .autocapitalization(.none)
-                            SecureField("Password", text: self.$password)
-                            SecureField("Renter Password", text: self.$confirmPassword)
+                            TextField("Password", text: self.$password)
+                            TextField("Renter Password", text: self.$confirmPassword)
                         }
                         
                         
@@ -39,10 +40,7 @@ struct SignUpView: View {
                                 if error != nil {
                                     print(#function, "Error: ", error!)
                                 }else{
-                                    var newUser = User()
-                                    newUser.email = self.email
-                                    newUser.displayName = self.name
-                                    session.insertUser(newUser: newUser)
+                                    session.insertUser(newUser: User(uid: result!.user.uid, displayName: name, email: result!.user.email))
                                     self.presentationMode.wrappedValue.dismiss()
                                 }
                                 

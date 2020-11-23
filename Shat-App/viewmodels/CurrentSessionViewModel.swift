@@ -20,7 +20,7 @@ class CurrentSessionViewModel: ObservableObject{
                 print("User retrieved: \(user)")
                 return self.currentUser = User(
                     uid: user.uid,
-                    name : user.displayName,
+                    displayName : user.displayName,
                     email: user.email
                 )
             }else{
@@ -29,10 +29,16 @@ class CurrentSessionViewModel: ObservableObject{
         }
     }
     func insertUser(newUser : User){
-        do{
-            _ = try db.collection(DB_NAME).addDocument(from: newUser)
-        }catch let error as NSError {
-            print(#function,"Error Creating Document: \(error.localizedDescription)")
+        db.collection(DB_NAME).document(newUser.uid).setData([
+            "displayName" : newUser.displayName!,
+            "email" : newUser.email!,
+            "uid" : newUser.uid
+        ]){ err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
         }
     }
     func signUp(email: String, password: String, handler: @escaping AuthDataResultCallback){
