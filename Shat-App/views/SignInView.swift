@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct SignInView: View {
     @EnvironmentObject var session : CurrentSessionViewModel
-    @EnvironmentObject var chat : ChatViewModel
+    let user = Auth.auth().currentUser
     @State private var email:String = ""
     @State private var password: String = ""
     @State private var rememberMe: Bool = true
@@ -81,6 +82,10 @@ struct SignInView: View {
                 }
             }//Vstack
             .onAppear(){
+                if(user?.uid != nil){
+                    print(user?.uid ?? "no User")
+                    selection = 1
+                }
                 self.email = UserDefaults.standard.string(forKey: "KEY_EMAIL") ?? ""
                 self.password = UserDefaults.standard.string(forKey: "COM_SHATAPP_PASSWORD") ?? ""
                 self.rememberMe = UserDefaults.standard.bool(forKey: "COM_SHATAPP")

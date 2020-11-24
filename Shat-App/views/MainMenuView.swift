@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Firebase
+import FirebaseAuth
 
 struct ChatHistory : Hashable {
     var id = UUID()
@@ -52,6 +53,7 @@ struct HistoryRow : View {
 
 struct MainMenuView: View {
     @EnvironmentObject var session : CurrentSessionViewModel
+    let user = Auth.auth().currentUser
     @Environment(\.presentationMode) var presentationMode
     @State private var selection: Int? = nil
     @State var history = [
@@ -112,6 +114,8 @@ struct MainMenuView: View {
             .navigationBarTitle("Chat History")
             .navigationBarBackButtonHidden(true)
             .onAppear(){
+                session.loadUser()
+                print(user?.email)
             }
 //        }//NavigationView
 
