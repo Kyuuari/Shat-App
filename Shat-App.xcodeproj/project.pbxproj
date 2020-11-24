@@ -26,6 +26,12 @@
 		E92B69122568912A000F0E22 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92B69112568912A000F0E22 /* ChatViewModel.swift */; };
 		E92B695F256A3D1D000F0E22 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92B695E256A3D1D000F0E22 /* Message.swift */; };
 		E92B6962256A3D2A000F0E22 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92B6961256A3D2A000F0E22 /* Chat.swift */; };
+		E9799F78256DA11D007A6B92 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9799F77256DA11D007A6B92 /* LoginController.swift */; };
+		E9799F81256DA183007A6B92 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9799F80256DA183007A6B92 /* Extentions.swift */; };
+		E9799F84256DA219007A6B92 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9799F83256DA219007A6B92 /* LoginViewModel.swift */; };
+		E9799F87256DA326007A6B92 /* RegisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9799F86256DA326007A6B92 /* RegisController.swift */; };
+		E9799F8D256DA45F007A6B92 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9799F8C256DA45F007A6B92 /* ContainerView.swift */; };
+		E9799F90256DA55B007A6B92 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9799F8F256DA55B007A6B92 /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +58,12 @@
 		E92B69112568912A000F0E22 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		E92B695E256A3D1D000F0E22 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		E92B6961256A3D2A000F0E22 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		E9799F77256DA11D007A6B92 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		E9799F80256DA183007A6B92 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		E9799F83256DA219007A6B92 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		E9799F86256DA326007A6B92 /* RegisController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisController.swift; sourceTree = "<group>"; };
+		E9799F8C256DA45F007A6B92 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		E9799F8F256DA55B007A6B92 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +93,7 @@
 			children = (
 				01F30B6D255B4D8C00145ED6 /* CurrentSessionViewModel.swift */,
 				E92B69112568912A000F0E22 /* ChatViewModel.swift */,
+				E9799F83256DA219007A6B92 /* LoginViewModel.swift */,
 			);
 			path = viewmodels;
 			sourceTree = "<group>";
@@ -102,6 +115,8 @@
 				94DE9F052554B3DE002B5E3A /* ChatRoomView.swift */,
 				94DE9F082554ED76002B5E3A /* MainMenuView.swift */,
 				01F15C6125620E010030723B /* UserProfileView.swift */,
+				E9799F8F256DA55B007A6B92 /* CustomTextField.swift */,
+				E9799F8C256DA45F007A6B92 /* ContainerView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -127,6 +142,8 @@
 		94D7F37E2537EAF200783181 /* Shat-App */ = {
 			isa = PBXGroup;
 			children = (
+				E9799F7A256DA150007A6B92 /* Helper */,
+				E9799F71256DA0DA007A6B92 /*  Controller */,
 				01F30B68255B4AB200145ED6 /* viewmodels */,
 				01F30B67255B4AA800145ED6 /* models */,
 				94774FA82551FD6F0060532D /* views */,
@@ -148,6 +165,23 @@
 				94D7F38B2537EAF200783181 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E9799F71256DA0DA007A6B92 /*  Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E9799F77256DA11D007A6B92 /* LoginController.swift */,
+				E9799F86256DA326007A6B92 /* RegisController.swift */,
+			);
+			path = " Controller";
+			sourceTree = "<group>";
+		};
+		E9799F7A256DA150007A6B92 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E9799F80256DA183007A6B92 /* Extentions.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		F3BDA5873F75D6E48CBD59A0 /* Pods */ = {
@@ -274,17 +308,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9799F8D256DA45F007A6B92 /* ContainerView.swift in Sources */,
 				01F30B6E255B4D8C00145ED6 /* CurrentSessionViewModel.swift in Sources */,
 				94D7F3802537EAF200783181 /* AppDelegate.swift in Sources */,
 				94D7F3872537EAF200783181 /* Shat_App.xcdatamodeld in Sources */,
 				94DE9F092554ED76002B5E3A /* MainMenuView.swift in Sources */,
+				E9799F78256DA11D007A6B92 /* LoginController.swift in Sources */,
 				94D7F3822537EAF200783181 /* SceneDelegate.swift in Sources */,
+				E9799F87256DA326007A6B92 /* RegisController.swift in Sources */,
 				94D7F3842537EAF200783181 /* ContentView.swift in Sources */,
 				01F30B6A255B4C6800145ED6 /* User.swift in Sources */,
 				01F15C6225620E010030723B /* UserProfileView.swift in Sources */,
 				94DE9F062554B3DE002B5E3A /* ChatRoomView.swift in Sources */,
+				E9799F84256DA219007A6B92 /* LoginViewModel.swift in Sources */,
 				94DE9F032554B088002B5E3A /* SignUpView.swift in Sources */,
+				E9799F90256DA55B007A6B92 /* CustomTextField.swift in Sources */,
 				E92B69122568912A000F0E22 /* ChatViewModel.swift in Sources */,
+				E9799F81256DA183007A6B92 /* Extentions.swift in Sources */,
 				94774FAA2551FD920060532D /* SignInView.swift in Sources */,
 				E92B6962256A3D2A000F0E22 /* Chat.swift in Sources */,
 				E92B695F256A3D1D000F0E22 /* Message.swift in Sources */,

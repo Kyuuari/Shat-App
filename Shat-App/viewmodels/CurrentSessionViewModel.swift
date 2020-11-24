@@ -7,13 +7,14 @@
 
 import Foundation
 import Firebase
+import FirebaseAuth
+import FirebaseFirestore
 import SwiftUI
 
 class CurrentSessionViewModel: ObservableObject{
     @Published var currentUser: User?
     private var db = Firestore.firestore()
     private let DB_NAME = "Users"
-    
     private var displayName = ""
     private var email = ""
     
