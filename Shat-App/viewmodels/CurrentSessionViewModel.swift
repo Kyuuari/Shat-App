@@ -13,6 +13,10 @@ class CurrentSessionViewModel: ObservableObject{
     @Published var currentUser: User?
     private var db = Firestore.firestore()
     private let DB_NAME = "Users"
+    
+    private var displayName = ""
+    private var email = ""
+    
     var handle: AuthStateDidChangeListenerHandle?
     func listen(){
         handle = Auth.auth().addStateDidChangeListener{ (auth, user) in
@@ -60,24 +64,30 @@ class CurrentSessionViewModel: ObservableObject{
             Auth.auth().removeStateDidChangeListener(handle)
         }
     }
-    func getUser() -> String?{
+    
+    func loadUser() -> Void {
         let user = Auth.auth().currentUser
 
         let docRef = db.collection("Users").document("\(user!.uid)")
-
-        print(user!.uid)
-
+        
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
                 let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
                 print("Document data: \(dataDescription)")
+                self.displayName = "\(document.get("displayName")!)"
+                self.email = "\(document.get("email")!)"
+                print(self.displayName)
             } else {
                 print("Document does not exist")
             }
         }
-                
-
-        
-        return user?.uid
+    }
+    
+    func getUserName() -> String?{
+        return displayName
+    }
+    
+    func getUserEmail() -> String?{
+        return email
     }
 }
