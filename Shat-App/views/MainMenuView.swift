@@ -114,6 +114,7 @@ struct MainMenuView: View {
             .navigationBarTitle("Chat History")
             .navigationBarBackButtonHidden(true)
             .onAppear(){
+                session.loadUser()
                 print(user?.email)
             }
 //        }//NavigationView
