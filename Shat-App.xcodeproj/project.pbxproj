@@ -32,6 +32,7 @@
 		E9799F87256DA326007A6B92 /* RegisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9799F86256DA326007A6B92 /* RegisController.swift */; };
 		E9799F8D256DA45F007A6B92 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9799F8C256DA45F007A6B92 /* ContainerView.swift */; };
 		E9799F90256DA55B007A6B92 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9799F8F256DA55B007A6B92 /* CustomTextField.swift */; };
+		E9C4FDAA256E2F3D00F6F985 /* RegisViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C4FDA9256E2F3D00F6F985 /* RegisViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		E9799F86256DA326007A6B92 /* RegisController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisController.swift; sourceTree = "<group>"; };
 		E9799F8C256DA45F007A6B92 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		E9799F8F256DA55B007A6B92 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		E9C4FDA9256E2F3D00F6F985 /* RegisViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				01F30B6D255B4D8C00145ED6 /* CurrentSessionViewModel.swift */,
 				E92B69112568912A000F0E22 /* ChatViewModel.swift */,
 				E9799F83256DA219007A6B92 /* LoginViewModel.swift */,
+				E9C4FDA9256E2F3D00F6F985 /* RegisViewModel.swift */,
 			);
 			path = viewmodels;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				E9799F78256DA11D007A6B92 /* LoginController.swift in Sources */,
 				94D7F3822537EAF200783181 /* SceneDelegate.swift in Sources */,
 				E9799F87256DA326007A6B92 /* RegisController.swift in Sources */,
+				E9C4FDAA256E2F3D00F6F985 /* RegisViewModel.swift in Sources */,
 				94D7F3842537EAF200783181 /* ContentView.swift in Sources */,
 				01F30B6A255B4C6800145ED6 /* User.swift in Sources */,
 				01F15C6225620E010030723B /* UserProfileView.swift in Sources */,
