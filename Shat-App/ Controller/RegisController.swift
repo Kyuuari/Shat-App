@@ -8,9 +8,12 @@
 import Foundation
 import UIKit
 import Firebase
+import FirebaseAuth
 
 class RegisController: UIViewController {
 
+    private var viewModel = RegisViewModel()
+    weak var delegate: AuthenticationDelegate?
     
     private lazy var emailContainerView: UIView = {
         return ContainerView(image: UIImage(systemName: "envelope"), textField: emailTextField)
@@ -47,6 +50,7 @@ class RegisController: UIViewController {
         button.setTitleColor(.white, for: .normal)
         button.setHeight(height: 50)
         button.isEnabled = false
+        button.addTarget(self, action: #selector(register), for: .touchUpInside)
         return button
     }()
     
@@ -69,12 +73,48 @@ class RegisController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        configNotificationObservers()
     }
     
     
+    @objc func textDidChange(sender: UITextField) {
+        if sender == emailTextField {
+            viewModel.email = sender.text
+        } else if sender == passwordTextField {
+            viewModel.password = sender.text
+        } else if sender == fullnameTextField {
+            viewModel.fullname = sender.text
+        } else if sender == usernameTextField {
+            viewModel.username = sender.text
+        }
+        
+        checkFormStatus()
+    }
     
     @objc func Login() {
         navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func register() {
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        guard let fullname = fullnameTextField.text else { return }
+        guard let username = usernameTextField.text?.lowercased() else { return }
+        
+        let credentials = RegistrationCredentials(email: email, password: password,fullname: fullname, username: username)
+        
+        showLoader(true, withText: "Signing You Up")
+        
+        AuthService.shared.createUser(credentials: credentials) { error in
+            if let error = error {
+                self.showLoader(false)
+                self.showError(error.localizedDescription)
+                return
+            }
+            
+            self.showLoader(false)
+            self.delegate?.authenticationComplete()
+        }
     }
     
     func configureUI() {
@@ -101,9 +141,45 @@ class RegisController: UIViewController {
                                         bottom: view.safeAreaLayoutGuide.bottomAnchor,
                                         right: view.rightAnchor, paddingLeft: 32, paddingRight: 32)
     }
+    
+    @objc func keyboardWillShow() {
+        if view.frame.origin.y == 0 {
+            self.view.frame.origin.y -= 88
+        }
+    }
+    
+    @objc func keyboardWillHide() {
+        if view.frame.origin.y != 0 {
+            view.frame.origin.y = 0
+        }
+    }
+    
+    func configNotificationObservers() {
+        emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        fullnameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        usernameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+   
+}
+extension RegisController: AuthenticationControllerProtocol {
+    func checkFormStatus() {
+        if viewModel.formIsValid {
+            signUpButton.isEnabled = true
+            signUpButton.backgroundColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
+        } else {
+            signUpButton.isEnabled = false
+            signUpButton.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        }
+    }
+
 
 }
-
 
 
 

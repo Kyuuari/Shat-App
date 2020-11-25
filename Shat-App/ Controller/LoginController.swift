@@ -8,6 +8,13 @@
 import Foundation
 import Firebase
 
+protocol AuthenticationControllerProtocol {
+    func checkFormStatus()
+}
+
+protocol AuthenticationDelegate: class {
+    func authenticationComplete()
+}
 
 class LoginController: UIViewController {
     
@@ -41,7 +48,6 @@ class LoginController: UIViewController {
     }()
     
     private let emailTextField = CustomTextField(placeholder: "Email")
-    
     private let passwordTextField: CustomTextField = {
         let tf = CustomTextField(placeholder: "Password")
         tf.isSecureTextEntry = true
@@ -80,44 +86,26 @@ class LoginController: UIViewController {
         } else {
             viewModel.password = sender.text
         }
-        
         checkFormStatus()
     }
-    
-    
-    func checkFormStatus() {
-        if viewModel.formIsValid {
-            loginButton.isEnabled = true
-            loginButton.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
-        } else {
-            loginButton.isEnabled = false
-            loginButton.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-        }
-    }
-        
     
 
     func configureUI() {
         navigationController?.navigationBar.isHidden = true
         navigationController?.navigationBar.barStyle = .black
-        
         configureGradientLayer()
-        
         view.addSubview(iconImage)
         iconImage.centerX(inView: view)
         iconImage.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 32)
         iconImage.setDimensions(height: 120, width: 120)
-        
         let stack = UIStackView(arrangedSubviews: [emailContainerView,
                                                    passwordContainerView,
                                                    loginButton])
         stack.axis = .vertical
         stack.spacing = 16
-        
         view.addSubview(stack)
         stack.anchor(top: iconImage.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor,
                      paddingTop: 32, paddingLeft: 32, paddingRight: 32)
-        
         view.addSubview(noAccountButton)
         noAccountButton.anchor(left: view.leftAnchor,
                                      bottom: view.safeAreaLayoutGuide.bottomAnchor,
@@ -125,6 +113,20 @@ class LoginController: UIViewController {
         emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
     }
+}
+
+extension LoginController: AuthenticationControllerProtocol {
+    func checkFormStatus() {
+        if viewModel.formIsValid {
+            loginButton.isEnabled = true
+            loginButton.backgroundColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
+        } else {
+            loginButton.isEnabled = false
+            loginButton.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        }
+    }
+
+
 }
 
 

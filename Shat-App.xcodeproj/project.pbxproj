@@ -33,6 +33,7 @@
 		E9799F8D256DA45F007A6B92 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9799F8C256DA45F007A6B92 /* ContainerView.swift */; };
 		E9799F90256DA55B007A6B92 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9799F8F256DA55B007A6B92 /* CustomTextField.swift */; };
 		E9C4FDAA256E2F3D00F6F985 /* RegisViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C4FDA9256E2F3D00F6F985 /* RegisViewModel.swift */; };
+		E9C4FDAD256E469B00F6F985 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C4FDAC256E469B00F6F985 /* AuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		E9799F8C256DA45F007A6B92 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		E9799F8F256DA55B007A6B92 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		E9C4FDA9256E2F3D00F6F985 /* RegisViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisViewModel.swift; sourceTree = "<group>"; };
+		E9C4FDAC256E469B00F6F985 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				E9799F80256DA183007A6B92 /* Extentions.swift */,
+				E9C4FDAC256E469B00F6F985 /* AuthService.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				94D7F3802537EAF200783181 /* AppDelegate.swift in Sources */,
 				94D7F3872537EAF200783181 /* Shat_App.xcdatamodeld in Sources */,
 				94DE9F092554ED76002B5E3A /* MainMenuView.swift in Sources */,
+				E9C4FDAD256E469B00F6F985 /* AuthService.swift in Sources */,
 				E9799F78256DA11D007A6B92 /* LoginController.swift in Sources */,
 				94D7F3822537EAF200783181 /* SceneDelegate.swift in Sources */,
 				E9799F87256DA326007A6B92 /* RegisController.swift in Sources */,

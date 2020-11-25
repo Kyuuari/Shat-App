@@ -21,6 +21,12 @@ target 'Shat-App' do
     pod 'Firebase/Database'
     
     pod 'MessageKit'
+    
+    pod 'Firebase/Storage'
+    
+    pod 'SDWebImage','~>4.4.2'
+    
+    pod 'JGProgressHUD','~>2.0.3'
 
 
 end
