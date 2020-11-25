@@ -11,6 +11,8 @@ import Firebase
 
 class LoginController: UIViewController {
     
+    private var viewModel = LoginViewModel()
+    
     private let iconImage: UIImageView = {
         let iv = UIImageView()
         iv.image = UIImage(systemName: "bubble.right")
@@ -71,6 +73,29 @@ class LoginController: UIViewController {
         let controller = RegisController()
         navigationController?.pushViewController(controller, animated: true)
     }
+    
+    @objc func textDidChange(sender: UITextField) {
+        if sender == emailTextField {
+            viewModel.email = sender.text
+        } else {
+            viewModel.password = sender.text
+        }
+        
+        checkFormStatus()
+    }
+    
+    
+    func checkFormStatus() {
+        if viewModel.formIsValid {
+            loginButton.isEnabled = true
+            loginButton.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+        } else {
+            loginButton.isEnabled = false
+            loginButton.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        }
+    }
+        
+    
 
     func configureUI() {
         navigationController?.navigationBar.isHidden = true
@@ -97,6 +122,8 @@ class LoginController: UIViewController {
         noAccountButton.anchor(left: view.leftAnchor,
                                      bottom: view.safeAreaLayoutGuide.bottomAnchor,
                                      right: view.rightAnchor, paddingLeft: 32, paddingRight: 32)
+        emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
     }
 }
 
