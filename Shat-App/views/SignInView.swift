@@ -7,7 +7,7 @@
 
 import SwiftUI
 import FirebaseAuth
-
+/*
 struct SignInView: View {
     @EnvironmentObject var session : CurrentSessionViewModel
     let user = Auth.auth().currentUser
@@ -103,3 +103,4 @@ struct SignInView_Previews: PreviewProvider {
         SignInView()
     }
 }
+ */

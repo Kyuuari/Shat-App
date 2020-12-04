@@ -11,14 +11,17 @@ import FirebaseFirestoreSwift
 
 class User: Codable {
     
-    var uid : String
-    var email: String?
-    var displayName: String?
+    let uid: String
+    let profileImageUrl: String
+    var username: String
+    var fullname: String
+    var email: String
     
-    
-    init(uid: String, displayName: String?, email: String?){
-        self.uid = uid
-        self.displayName = displayName
-        self.email = email
+    init(dictionary: [String: Any]) {
+        self.uid = dictionary["uid"] as? String ?? ""
+        self.profileImageUrl = dictionary["profileImageUrl"] as? String ?? ""
+        self.username = dictionary["username"] as? String ?? ""
+        self.fullname = dictionary["fullname"] as? String ?? ""
+        self.email = dictionary["email"] as? String ?? ""
     }
 }

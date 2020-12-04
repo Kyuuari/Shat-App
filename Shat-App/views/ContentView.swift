@@ -8,7 +8,7 @@
 import SwiftUI
 import Foundation
 import FirebaseFirestore
-
+/*
 struct ContentView: View {
     
     @ObservedObject var viewModel = ChatViewModel()
@@ -44,4 +44,4 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
-}
+}*/

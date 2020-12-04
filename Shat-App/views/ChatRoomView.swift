@@ -6,7 +6,7 @@
 //  Modified by brendon 01
 
 import SwiftUI
-
+/*
 struct ChatMessage : Hashable {
     var id = UUID()
     var message: String
@@ -129,3 +129,4 @@ struct ChatRoomView_Previews: PreviewProvider {
         ChatRoomView()
     }
 }
+ */

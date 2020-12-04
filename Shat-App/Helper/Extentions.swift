@@ -70,8 +70,6 @@ extension UIView {
         widthAnchor.constraint(equalToConstant: width).isActive = true
     }
     
-    
-    
     func setHeight(height: CGFloat) {
         translatesAutoresizingMaskIntoConstraints = false
         heightAnchor.constraint(equalToConstant: height).isActive = true
@@ -103,7 +101,15 @@ extension UIView {
 }
 
 extension UIViewController {
-   static let hud = JGProgressHUD(style: .dark)
+    static let hud = JGProgressHUD(style: .dark)
+
+    func configureGradientLayer() {
+        let gradient = CAGradientLayer()
+        gradient.colors = [UIColor.systemBlue.cgColor, UIColor.systemGray.cgColor]
+        gradient.locations = [0, 1]
+        view.layer.addSublayer(gradient)
+        gradient.frame = view.frame
+    }
     
     func showLoader(_ show: Bool, withText text: String? = "Loading") {
         view.endEditing(true)
@@ -116,20 +122,31 @@ extension UIViewController {
         }
     }
     
+    func configureNavigationBar(withTitle title: String, prefersLargeTitles: Bool) {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.backgroundColor = .systemBlue
+        
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.compactAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        
+        navigationController?.navigationBar.prefersLargeTitles = prefersLargeTitles
+        navigationItem.title = title
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.isTranslucent = true
+        
+        navigationController?.navigationBar.overrideUserInterfaceStyle = .dark
+    }
+    
     func showError(_ errorMessage: String) {
         let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
-    
-    
-    func configureGradientLayer() {
-        let gradient = CAGradientLayer()
-        gradient.colors = [UIColor.systemBlue
-                            .cgColor, UIColor.systemGray.cgColor]
-        gradient.locations = [0, 1]
-        view.layer.addSublayer(gradient)
-        gradient.frame = view.frame
-    }
 }
+
+
+
    

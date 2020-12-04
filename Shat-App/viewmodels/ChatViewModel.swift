@@ -8,7 +8,7 @@
 
 import Foundation
 import FirebaseFirestore
-
+/*
 class ChatViewModel: ObservableObject {
     @Published var messages = [Message]()
     
@@ -50,4 +50,4 @@ class ChatViewModel: ObservableObject {
     
     
     
-  }
+  }*/

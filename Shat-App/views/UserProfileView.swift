@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+/*
 struct UserProfileView: View {
     @EnvironmentObject var session : CurrentSessionViewModel
     //    let userInfo = session.currentUser?.providerData[indexPath.row]
@@ -46,3 +46,4 @@ struct UserProfileView_Previews: PreviewProvider {
         UserProfileView()
     }
 }
+ */
