@@ -7,7 +7,7 @@
 
 import SwiftUI
 import FirebaseAuth
-
+/*
 struct SignInView: View {
     @EnvironmentObject var session : CurrentSessionViewModel
     let user = Auth.auth().currentUser
@@ -69,6 +69,15 @@ struct SignInView: View {
                         }.sheet(isPresented: $signUpPressed){
                             SignUpView()
                         }
+                        
+                        Button(action: {
+                            self.signUpPressed = true
+                            print("SignUp Button pressed")
+                        }){
+                            Text("test")
+                        }.sheet(isPresented: $signUpPressed){
+                            ContentView()
+                        }
                     }//Form
                 }
             }//Vstack
@@ -94,3 +103,4 @@ struct SignInView_Previews: PreviewProvider {
         SignInView()
     }
 }
+ */

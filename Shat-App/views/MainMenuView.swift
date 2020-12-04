@@ -8,7 +8,7 @@
 import SwiftUI
 import Firebase
 import FirebaseAuth
-
+/*
 struct ChatHistory : Hashable {
     var id = UUID()
     var avatar: String
@@ -131,3 +131,4 @@ struct MainMenuView_Previews: PreviewProvider {
         MainMenuView()
     }
 }
+ */

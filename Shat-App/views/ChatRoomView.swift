@@ -3,10 +3,10 @@
 //  Shat-App
 //
 //  Created by Chester Cari on 2020-11-05.
-//
+//  Modified by brendon 01
 
 import SwiftUI
-
+/*
 struct ChatMessage : Hashable {
     var id = UUID()
     var message: String
@@ -17,7 +17,9 @@ struct ChatMessage : Hashable {
 
 
 struct ChatRow : View {
+   
     // we will need to access and represent the chatMessages here
+    @ObservedObject var chatModel = ChatViewModel()
     var chatMessage: ChatMessage
     var body: some View {
         Group {
@@ -54,8 +56,10 @@ struct ChatRow : View {
 
 struct ChatRoomView: View {
     // @State here is necessary to make the composedMessage variable accessible from different views
+    @EnvironmentObject var chat : ChatViewModel
     @State var composedMessage: String = ""
     @State var messages = [
+        ChatMessage(message: "Hello world",avatar: "Me", color: .green, isMe: true),
         ChatMessage(message: "Hello world", avatar: "Me", color: .green, isMe: true),
         ChatMessage(message: "Hi", avatar: "Tom", color: .blue),
         ChatMessage(message: "Yo Wats up this is a very long message", avatar: "Tom", color: .blue),
@@ -72,6 +76,8 @@ struct ChatRoomView: View {
         ChatMessage(message: "Im here 5", avatar: "Me", color: .green, isMe: true),
         ChatMessage(message: "Im here 5", avatar: "Me", color: .green, isMe: true),
     ]
+
+                    
     
     var body: some View {
         
@@ -113,6 +119,7 @@ struct ChatRoomView: View {
           func sendMessage() {
             messages.append(ChatMessage(message: composedMessage, avatar: "Me", color: .green, isMe: true))
               composedMessage = ""
+
           }
         
 }
@@ -122,3 +129,4 @@ struct ChatRoomView_Previews: PreviewProvider {
         ChatRoomView()
     }
 }
+ */

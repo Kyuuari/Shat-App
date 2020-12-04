@@ -7,7 +7,7 @@
 
 import SwiftUI
 import FirebaseAuth
-
+/*
 struct SignUpView: View {
     @EnvironmentObject var session : CurrentSessionViewModel
     @Environment(\.presentationMode) var presentationMode
@@ -67,3 +67,4 @@ struct SignUpView_Previews: PreviewProvider {
         SignUpView()
     }
 }
+ */

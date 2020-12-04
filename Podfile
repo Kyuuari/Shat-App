@@ -8,11 +8,25 @@ target 'Shat-App' do
   # Pods for Shat-App
 
   	pod 'Firebase'
+    
+    
+    pod 'Firebase/Core'
 
   	pod 'Firebase/Auth'
 
   	pod 'Firebase/Firestore'
 
-	pod 'FirebaseFirestoreSwift'
+    pod 'FirebaseFirestoreSwift'
+ 
+    pod 'Firebase/Database'
+    
+    pod 'MessageKit'
+    
+    pod 'Firebase/Storage'
+    
+    pod 'SDWebImage','~>4.4.2'
+    
+    pod 'JGProgressHUD','~>2.0.3'
+
 
 end

@@ -12,7 +12,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
     
-    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
@@ -26,17 +25,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //        let contentView = ContentView().environment(\.managedObjectContext, context)
         
         //switching to Signin Screen as First View
-        let contentView = SignInView()
-            .environment(\.managedObjectContext, context)
-            .environmentObject(CurrentSessionViewModel())
+     //   let contentView = ContentView()
+       //     .environment(\.managedObjectContext, context)
+         //   .environmentObject(ChatViewModel())
+        
+      //  let contentView = SignInView()
+       //     .environment(\.managedObjectContext, context)
+        //    .environmentObject(CurrentSessionViewModel())
+        
+      
         
         // Use a UIHostingController as window root view controller.
-        if let windowScene = scene as? UIWindowScene {
-            let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView)
-            self.window = window
-            window.makeKeyAndVisible()
-        }
+            
+            guard let scene = (scene as? UIWindowScene) else { return }
+            window = UIWindow(windowScene: scene)
+            let nav = UINavigationController(rootViewController: ConversationsController())
+            window?.rootViewController = nav
+            window?.makeKeyAndVisible()
+        
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {
