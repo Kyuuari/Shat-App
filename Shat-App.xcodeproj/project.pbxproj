@@ -13,6 +13,15 @@
 		01F30B73255B635800145ED6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01F30B72255B635700145ED6 /* GoogleService-Info.plist */; };
 		17D34B115BB1B5B22F2F6949 /* Pods_Shat_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E7DABD392062AC888C3CCE /* Pods_Shat_App.framework */; };
 		94774FAA2551FD920060532D /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94774FA92551FD920060532D /* SignInView.swift */; };
+		94D0810F25804357003868D4 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D0810E25804357003868D4 /* WidgetKit.framework */; };
+		94D0811125804357003868D4 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D0811025804357003868D4 /* SwiftUI.framework */; };
+		94D0811425804357003868D4 /* ShatAppWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0811325804357003868D4 /* ShatAppWidget.swift */; };
+		94D0811625804359003868D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94D0811525804359003868D4 /* Assets.xcassets */; };
+		94D0811A25804359003868D4 /* ShatAppWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 94D0810D25804357003868D4 /* ShatAppWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		94D0812225804428003868D4 /* WidgetMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0812125804428003868D4 /* WidgetMessageViewModel.swift */; };
+		94D0812325804428003868D4 /* WidgetMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0812125804428003868D4 /* WidgetMessageViewModel.swift */; };
+		94D0812725804453003868D4 /* WidgetMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0812625804453003868D4 /* WidgetMessage.swift */; };
+		94D0812825804453003868D4 /* WidgetMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0812625804453003868D4 /* WidgetMessage.swift */; };
 		94D7F3802537EAF200783181 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D7F37F2537EAF200783181 /* AppDelegate.swift */; };
 		94D7F3822537EAF200783181 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D7F3812537EAF200783181 /* SceneDelegate.swift */; };
 		94D7F3842537EAF200783181 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D7F3832537EAF200783181 /* ContentView.swift */; };
@@ -58,6 +67,30 @@
 		E9C4FE04256E6FDC00F6F985 /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C4FE03256E6FDC00F6F985 /* ConversationsController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		94D0811825804359003868D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94D7F3742537EAF200783181 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 94D0810C25804357003868D4;
+			remoteInfo = ShatAppWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		94D0811B25804359003868D4 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				94D0811A25804359003868D4 /* ShatAppWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		01F15C6125620E010030723B /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		01F30B69255B4C6800145ED6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -65,6 +98,14 @@
 		01F30B72255B635700145ED6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7971487AFAF80529A38173F8 /* Pods-Shat-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shat-App.release.xcconfig"; path = "Target Support Files/Pods-Shat-App/Pods-Shat-App.release.xcconfig"; sourceTree = "<group>"; };
 		94774FA92551FD920060532D /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		94D0810D25804357003868D4 /* ShatAppWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShatAppWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		94D0810E25804357003868D4 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		94D0811025804357003868D4 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		94D0811325804357003868D4 /* ShatAppWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShatAppWidget.swift; sourceTree = "<group>"; };
+		94D0811525804359003868D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		94D0811725804359003868D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94D0812125804428003868D4 /* WidgetMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetMessageViewModel.swift; sourceTree = "<group>"; };
+		94D0812625804453003868D4 /* WidgetMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetMessage.swift; sourceTree = "<group>"; };
 		94D7F37C2537EAF200783181 /* Shat-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shat-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D7F37F2537EAF200783181 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94D7F3812537EAF200783181 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +156,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		94D0810A25804357003868D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94D0811125804357003868D4 /* SwiftUI.framework in Frameworks */,
+				94D0810F25804357003868D4 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		94D7F3792537EAF200783181 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -133,6 +183,7 @@
 				01F30B69255B4C6800145ED6 /* User.swift */,
 				E92B6961256A3D2A000F0E22 /* Chat.swift */,
 				E92B695E256A3D1D000F0E22 /* Message.swift */,
+				94D0812625804453003868D4 /* WidgetMessage.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -150,6 +201,7 @@
 				E94A2A662577E4E8004CF050 /* AccountDetailsViewModel.swift */,
 				E94A2A692577E513004CF050 /* ProfileViewModel.swift */,
 				E94A2A722578941A004CF050 /* SettingsViewModel.swift */,
+				94D0812125804428003868D4 /* WidgetMessageViewModel.swift */,
 			);
 			path = viewmodels;
 			sourceTree = "<group>";
@@ -158,6 +210,8 @@
 			isa = PBXGroup;
 			children = (
 				A4E7DABD392062AC888C3CCE /* Pods_Shat_App.framework */,
+				94D0810E25804357003868D4 /* WidgetKit.framework */,
+				94D0811025804357003868D4 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -186,10 +240,21 @@
 			path = views;
 			sourceTree = "<group>";
 		};
+		94D0811225804357003868D4 /* ShatAppWidget */ = {
+			isa = PBXGroup;
+			children = (
+				94D0811325804357003868D4 /* ShatAppWidget.swift */,
+				94D0811525804359003868D4 /* Assets.xcassets */,
+				94D0811725804359003868D4 /* Info.plist */,
+			);
+			path = ShatAppWidget;
+			sourceTree = "<group>";
+		};
 		94D7F3732537EAF200783181 = {
 			isa = PBXGroup;
 			children = (
 				94D7F37E2537EAF200783181 /* Shat-App */,
+				94D0811225804357003868D4 /* ShatAppWidget */,
 				94D7F37D2537EAF200783181 /* Products */,
 				F3BDA5873F75D6E48CBD59A0 /* Pods */,
 				56D3A9A4E368D42C8D21DAE4 /* Frameworks */,
@@ -200,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				94D7F37C2537EAF200783181 /* Shat-App.app */,
+				94D0810D25804357003868D4 /* ShatAppWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -268,6 +334,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		94D0810C25804357003868D4 /* ShatAppWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94D0811E25804359003868D4 /* Build configuration list for PBXNativeTarget "ShatAppWidgetExtension" */;
+			buildPhases = (
+				94D0810925804357003868D4 /* Sources */,
+				94D0810A25804357003868D4 /* Frameworks */,
+				94D0810B25804357003868D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShatAppWidgetExtension;
+			productName = ShatAppWidgetExtension;
+			productReference = 94D0810D25804357003868D4 /* ShatAppWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		94D7F37B2537EAF200783181 /* Shat-App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94D7F3932537EAF200783181 /* Build configuration list for PBXNativeTarget "Shat-App" */;
@@ -277,10 +360,12 @@
 				94D7F3792537EAF200783181 /* Frameworks */,
 				94D7F37A2537EAF200783181 /* Resources */,
 				8C2067E647169BCCB2AED3CC /* [CP] Embed Pods Frameworks */,
+				94D0811B25804359003868D4 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				94D0811925804359003868D4 /* PBXTargetDependency */,
 			);
 			name = "Shat-App";
 			productName = "Shat-App";
@@ -293,9 +378,12 @@
 		94D7F3742537EAF200783181 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1200;
+				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
+					94D0810C25804357003868D4 = {
+						CreatedOnToolsVersion = 12.2;
+					};
 					94D7F37B2537EAF200783181 = {
 						CreatedOnToolsVersion = 12.0.1;
 					};
@@ -315,11 +403,20 @@
 			projectRoot = "";
 			targets = (
 				94D7F37B2537EAF200783181 /* Shat-App */,
+				94D0810C25804357003868D4 /* ShatAppWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		94D0810B25804357003868D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94D0811625804359003868D4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		94D7F37A2537EAF200783181 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -376,11 +473,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		94D0810925804357003868D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94D0812325804428003868D4 /* WidgetMessageViewModel.swift in Sources */,
+				94D0812825804453003868D4 /* WidgetMessage.swift in Sources */,
+				94D0811425804357003868D4 /* ShatAppWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		94D7F3782537EAF200783181 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E9799F8D256DA45F007A6B92 /* ContainerView.swift in Sources */,
+				94D0812725804453003868D4 /* WidgetMessage.swift in Sources */,
 				E94A2A5E257751F3004CF050 /* AccountDetailsCell.swift in Sources */,
 				01F30B6E255B4D8C00145ED6 /* CurrentSessionViewModel.swift in Sources */,
 				94D7F3802537EAF200783181 /* AppDelegate.swift in Sources */,
@@ -407,6 +515,7 @@
 				E94A2A42257748AD004CF050 /* UserCell.swift in Sources */,
 				E94A2A6A2577E513004CF050 /* ProfileViewModel.swift in Sources */,
 				E94A2A6D2577E5A8004CF050 /* SettingsController.swift in Sources */,
+				94D0812225804428003868D4 /* WidgetMessageViewModel.swift in Sources */,
 				01F30B6A255B4C6800145ED6 /* User.swift in Sources */,
 				01F15C6225620E010030723B /* UserProfileView.swift in Sources */,
 				94DE9F062554B3DE002B5E3A /* ChatRoomView.swift in Sources */,
@@ -429,6 +538,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		94D0811925804359003868D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 94D0810C25804357003868D4 /* ShatAppWidgetExtension */;
+			targetProxy = 94D0811825804359003868D4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		94D7F38D2537EAF200783181 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -441,6 +558,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		94D0811C25804359003868D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 747N5L4BFD;
+				INFOPLIST_FILE = ShatAppWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.caric.Shat-App.ShatAppWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		94D0811D25804359003868D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 747N5L4BFD;
+				INFOPLIST_FILE = ShatAppWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.caric.Shat-App.ShatAppWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		94D7F3912537EAF200783181 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -561,6 +722,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BBD1C212421ACD7D3FB4BFF4 /* Pods-Shat-App.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -583,6 +745,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7971487AFAF80529A38173F8 /* Pods-Shat-App.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -604,6 +767,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		94D0811E25804359003868D4 /* Build configuration list for PBXNativeTarget "ShatAppWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94D0811C25804359003868D4 /* Debug */,
+				94D0811D25804359003868D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		94D7F3772537EAF200783181 /* Build configuration list for PBXProject "Shat-App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
