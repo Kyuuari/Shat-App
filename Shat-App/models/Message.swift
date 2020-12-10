@@ -14,6 +14,8 @@ struct Message {
     let fromId: String
     var timestamp: Timestamp!
     var user: User?
+    var lat: Double
+    var lng: Double
     
     let isFromCurrentUser: Bool
     
@@ -26,6 +28,8 @@ struct Message {
         self.toId = dictionary["toId"] as? String ?? ""
         self.fromId = dictionary["fromId"] as? String ?? ""
         self.timestamp = dictionary["timestamp"] as? Timestamp ?? Timestamp(date: Date())
+        self.lat = dictionary["lat"] as? Double ?? 0.0
+        self.lng = dictionary["lng"] as? Double ?? 0.0
         
         self.isFromCurrentUser = fromId == Auth.auth().currentUser?.uid
     }
