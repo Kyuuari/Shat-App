@@ -7,11 +7,12 @@
 
 import Foundation
 import Firebase
+import SwiftUI
+import CoreLocation
 
 typealias FirestoreCompletion = ((Error?) -> Void)?
 
 struct Operation {
-    
     static func fetchUsers(completion: @escaping([User]) -> Void) {
         Firestore.firestore().collection("users").getDocuments { snapshot, error in
             guard var users = snapshot?.documents.map({ User(dictionary: $0.data()) }) else { return }
@@ -68,13 +69,18 @@ struct Operation {
         }
     }
     
-    static func uploadMessage(_ message: String, to user: User, completion: ((Error?) -> Void)?) {
+    static func uploadMessage(_ message: String, to user: User ,locationManager: LocationManager, completion: ((Error?) -> Void)?) {
         guard let currentUid = Auth.auth().currentUser?.uid else { return }
-        
+        var messageLat: Double = 0.0
+        var messageLng: Double = 0.0
+        messageLat = locationManager.lat
+        messageLng = locationManager.lng
         let data = ["text": message,
                     "fromId": currentUid,
                     "toId": user.uid,
-                    "timestamp": Timestamp(date: Date())] as [String : Any]
+                    "timestamp": Timestamp(date: Date()),
+                    "lat": messageLat,
+                    "lng": messageLng ] as [String : Any]
         
         Firestore.firestore().collection("users").document(currentUid).collection(user.uid).addDocument(data: data) { _ in
             Firestore.firestore().collection("users").document(user.uid).collection(currentUid).addDocument(data: data, completion: completion)

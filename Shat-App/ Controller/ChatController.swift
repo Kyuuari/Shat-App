@@ -14,6 +14,7 @@ class ChatController: UICollectionViewController {
     
     private let user: User
     private var messages = [Message]()
+    private let currLocation = LocationManager()
     var fromCurrentUser = false
     private lazy var customInputView: CustomInputAccessoryView = {
         let iv = CustomInputAccessoryView(frame: CGRect(x: 0, y: 0,
@@ -101,7 +102,7 @@ extension ChatController: UICollectionViewDelegateFlowLayout {
 extension ChatController: CustomInputAccessoryViewDelegate {
     func inputView(_ inputView: CustomInputAccessoryView, wantsToSend message: String) {
         
-        Operation.uploadMessage(message, to: user) { error in
+        Operation.uploadMessage(message, to: user, locationManager: currLocation) { error in
             if let error = error {
                 print("DEBUG: Failed to upload message with error \(error.localizedDescription)")
                 return
