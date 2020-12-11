@@ -13,7 +13,7 @@ class WidgetMessageViewModel : ObservableObject{
     @Published var mission = WidgetMessage()
     @Published var text = String()
 //    var apiURLString = "https://api.spacexdata.com/v3/launches?limit=50&offset=50"
-    var apiURLString = "https://firestore.googleapis.com/v1/projects/shat-app-892ae/databases/(default)/documents/users/prhxYjTNj0bX5IlEkGvC9M0rlwO2/recent-messages"
+    var apiURLString = "https://firestore.googleapis.com/v1/projects/shat-app-892ae/databases/(default)/documents/users/gZy7KQJ9qWgIAcYJdvKsLB3FH072/recent-messages"
     
     func fetchDataFromAPI(){
         guard let apiURL = URL(string: apiURLString) else{
