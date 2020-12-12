@@ -20,7 +20,7 @@ class RegisController: UIViewController {
     
     private let plusPhotoButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setImage(UIImage(systemName: "bubble.right"), for: .normal)
+        button.setImage(UIImage(systemName: "plus.rectangle.fill"), for: .normal)
         button.tintColor = .white
         button.addTarget(self, action: #selector(handleSelectPhoto), for: .touchUpInside)
         button.imageView?.contentMode = .scaleAspectFill
