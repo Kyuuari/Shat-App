@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01B6D3EF25849EB600EB5709 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B6D3EE25849EB600EB5709 /* LocationController.swift */; };
 		01BC86AA258052F300105E5C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BC86A9258052F300105E5C /* LocationManager.swift */; };
 		01D8956925813FD200573A09 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D8956825813FD200573A09 /* LocationView.swift */; };
 		01F15C6225620E010030723B /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F15C6125620E010030723B /* UserProfileView.swift */; };
@@ -94,6 +95,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		01B6D3EE25849EB600EB5709 /* LocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
 		01BC86A9258052F300105E5C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		01D8956825813FD200573A09 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		01F15C6125620E010030723B /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 				E94A2A5725775164004CF050 /* NewMessageController.swift */,
 				E94A2A5A257751B4004CF050 /* AccountDetailsController.swift */,
 				E94A2A6C2577E5A8004CF050 /* SettingsController.swift */,
+				01B6D3EE25849EB600EB5709 /* LocationController.swift */,
 			);
 			path = " Controller";
 			sourceTree = "<group>";
@@ -514,6 +517,7 @@
 				94DE9F092554ED76002B5E3A /* MainMenuView.swift in Sources */,
 				E9C4FDAD256E469B00F6F985 /* AuthService.swift in Sources */,
 				E9799F78256DA11D007A6B92 /* LoginController.swift in Sources */,
+				01B6D3EF25849EB600EB5709 /* LocationController.swift in Sources */,
 				94D7F3822537EAF200783181 /* SceneDelegate.swift in Sources */,
 				E94A2A5B257751B4004CF050 /* AccountDetailsController.swift in Sources */,
 				E9799F87256DA326007A6B92 /* RegisController.swift in Sources */,

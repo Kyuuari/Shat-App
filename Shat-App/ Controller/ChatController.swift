@@ -33,6 +33,7 @@ class ChatController: UICollectionViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -56,6 +57,7 @@ class ChatController: UICollectionViewController {
                                              at: .bottom, animated: true)
         }
     }
+   
     
     func configureUI() {
         collectionView.backgroundColor = .white
@@ -76,7 +78,13 @@ extension ChatController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MessageCell
         cell.message = messages[indexPath.row]
         cell.message?.user = user
+        cell.locationButtonView.addTarget(self, action: #selector(navToLocation), for: .touchDown)
         return cell
+    }
+    
+    @objc func navToLocation(){
+        let controller = LocationController(manager: currLocation)
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
 
