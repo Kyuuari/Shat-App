@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Shat-App</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Shat-App</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Shat-App requires location services to share your location to other users</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>

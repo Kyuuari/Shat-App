@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import Firebase
 import FirebaseAuth
+import Photos
 
 class RegisController: UIViewController {
 
@@ -28,19 +29,19 @@ class RegisController: UIViewController {
     }()
     
     private lazy var emailContainerView: UIView = {
-        return InputView(image: UIImage(systemName: "bubble.right"), textField: emailTextField)
+        return InputView(image: UIImage(systemName: "envelope"), textField: emailTextField)
     }()
     
     private lazy var fullnameContainerView: UIView = {
-        return InputView(image: UIImage(systemName: "bubble.right"), textField: fullnameTextField)
+        return InputView(image: UIImage(systemName: "person.circle"), textField: fullnameTextField)
     }()
     
     private lazy var usernameContainerView: UIView = {
-        return InputView(image: UIImage(systemName: "bubble.right"), textField: usernameTextField)
+        return InputView(image: UIImage(systemName: "person"), textField: usernameTextField)
     }()
 
     private lazy var passwordContainerView: InputView = {
-        return InputView(image: UIImage(systemName: "bubble.right"), textField: passwordTextField)
+        return InputView(image: UIImage(systemName: "a"), textField: passwordTextField)
     }()
     
     private let emailTextField = CustomTextField(placeholder: "Email")
@@ -93,11 +94,11 @@ class RegisController: UIViewController {
         guard let password = passwordTextField.text else { return }
         guard let fullname = fullnameTextField.text else { return }
         guard let username = usernameTextField.text?.lowercased() else { return }
-       // guard let profileImage = profileImage else { return }
+        guard let profileImage = profileImage else { return }
         
         let credentials = RegisCredentials(email: email, password: password,
-                                           fullname: fullname, username: username)
-                                                  //profileImage: profileImage)
+                                           fullname: fullname, username: username,
+                                                  profileImage: profileImage)
         
         showLoader(true, withText: "Signing You Up")
         
@@ -148,11 +149,35 @@ class RegisController: UIViewController {
             view.frame.origin.y = 0
         }
     }
-    
+    func checkPermission() {
+            let photoAuthorizationStatus = PHPhotoLibrary.authorizationStatus()
+            switch photoAuthorizationStatus {
+            case .authorized:
+                print("Access is granted by user")
+            case .notDetermined:
+                PHPhotoLibrary.requestAuthorization({
+                    (newStatus) in
+                    print("status is \(newStatus)")
+                    if newStatus ==  PHAuthorizationStatus.authorized {
+                        print("success")
+                    }
+                })
+                print("It is not determined until now")
+            case .restricted:
+                print("User do not have access to photo album.")
+            case .denied:
+                print("User has denied the permission.")
+            case .limited:
+                break
+            @unknown default: break
+                
+            }
+        }
     
     func configureUI() {
-        configureGradientLayer()
         
+       
+        configureGradientLayer()
         view.addSubview(plusPhotoButton)
         plusPhotoButton.centerX(inView: view)
         plusPhotoButton.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 32)

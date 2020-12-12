@@ -32,11 +32,11 @@ class LoginController: UIViewController {
     }()
     
     private lazy var emailContainerView: UIView = {
-        return InputView(image: UIImage(systemName: "bubble.right"), textField: emailTextField)
+        return InputView(image: UIImage(systemName: "envelope"), textField: emailTextField)
     }()
 
     private lazy var passwordContainerView: InputView = {
-        return InputView(image: UIImage(systemName: "bubble.right"), textField: passwordTextField)
+        return InputView(image: UIImage(systemName: "a"), textField: passwordTextField)
     }()
     
     private let loginButton: UIButton = {
