@@ -129,6 +129,7 @@ class RegisController: UIViewController {
     }
     
     @objc func handleSelectPhoto() {
+        checkPermission()
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
         present(imagePickerController, animated: true, completion: nil)
@@ -176,7 +177,6 @@ class RegisController: UIViewController {
     
     func configureUI() {
         
-       
         configureGradientLayer()
         view.addSubview(plusPhotoButton)
         plusPhotoButton.centerX(inView: view)
