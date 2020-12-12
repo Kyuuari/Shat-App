@@ -14,9 +14,16 @@ class MessageCell: UICollectionViewCell {
         didSet { configure() }
     }
 
+    private weak var navigationController: UINavigationController?
     var bubbleLeftAnchor: NSLayoutConstraint!
     var bubbleRightAnchor: NSLayoutConstraint!
 
+    let locationButtonView: UIButton = {
+        let locationButton = UIButton()
+        locationButton.setImage(UIImage(systemName: "location.north"), for: .normal)
+        return locationButton
+    }()
+    
     private let profileImageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
@@ -43,8 +50,11 @@ class MessageCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
 
+        addSubview(locationButtonView)
+        locationButtonView.anchor(left: leftAnchor, bottom: bottomAnchor,paddingLeft: 8, paddingBottom: -4,paddingRight: 10)
+        
         addSubview(profileImageView)
-        profileImageView.anchor(left: leftAnchor, bottom: bottomAnchor, paddingLeft: 8, paddingBottom: -4)
+        profileImageView.anchor(left: leftAnchor, bottom: bottomAnchor, paddingLeft: 25, paddingBottom: -4)
         profileImageView.setDimensions(height: 32, width: 32)
         profileImageView.layer.cornerRadius = 32 / 2
         
@@ -86,5 +96,11 @@ class MessageCell: UICollectionViewCell {
 
         profileImageView.isHidden = viewModel.shouldHideProfileImage
         profileImageView.sd_setImage(with: viewModel.profileImageUrl)
+        
+        locationButtonView.isHidden = viewModel.shouldHideProfileImage
+        locationButtonView.isEnabled = true
     }
+    
+    
+    
 }

@@ -113,4 +113,6 @@ struct Operation {
         let ref = Firestore.firestore().collection("users").document(uid).collection("recent-messages").document(user.uid)
         ref.delete(completion: completion)
     }
+    
+
 }
