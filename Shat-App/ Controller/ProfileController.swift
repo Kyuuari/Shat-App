@@ -48,8 +48,6 @@ class ProfileController: UITableViewController {
         }
     }
     
-    // MARK: - Helpers
-    
     func configureUI() {
         tableView.backgroundColor = .white
         
