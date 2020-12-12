@@ -9,11 +9,11 @@ import Foundation
 import WidgetKit
 
 class WidgetMessageViewModel : ObservableObject{
-//    @Published var missionList = [Mission]()
-    @Published var mission = WidgetMessage()
+
+    @Published var message = WidgetMessage()
     @Published var text = String()
-//    var apiURLString = "https://api.spacexdata.com/v3/launches?limit=50&offset=50"
-    var apiURLString = "https://firestore.googleapis.com/v1/projects/shat-app-892ae/databases/(default)/documents/users/gZy7KQJ9qWgIAcYJdvKsLB3FH072/recent-messages"
+
+    var apiURLString = "https://firestore.googleapis.com/v1/projects/shat-app-892ae/databases/(default)/documents/users/sP2vtpXrewZMq8ePmz9Q2UzuSz03/recent-messages"
     
     func fetchDataFromAPI(){
         guard let apiURL = URL(string: apiURLString) else{
@@ -35,15 +35,12 @@ class WidgetMessageViewModel : ObservableObject{
                             //start decoding
                             let decoder = JSONDecoder()
                             
-//                            let decodedList = try decoder.decode([Mission].self, from: jsonData)
                             let decoded = try decoder.decode(WidgetMessage.self, from: jsonData)
                             //you cannot publish any changes from the background thread
                             DispatchQueue.main.async {
-                                self.mission = decoded
-                                self.text = self.mission.documents?[0].textValue ?? "unavailable"
-//                                self.missionList = decodedList
-//                                print(self.mission)
-                                print(#function, self.mission)
+                                self.message = decoded
+                                self.text = self.message.documents?[0].textValue ?? "unavailable"
+                                print(#function, self.message)
                             }
                             
                             
@@ -58,9 +55,7 @@ class WidgetMessageViewModel : ObservableObject{
             
         }.resume()
         
-        //update Widget when data is available
         WidgetCenter.shared.reloadTimelines(ofKind: "com.caric.SpaceXJSON.ShatAppWidget")
         
-//        print(#function, "StockPriceList: \(text)")
     }
 }

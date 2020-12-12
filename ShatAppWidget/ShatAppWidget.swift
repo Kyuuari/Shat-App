@@ -12,7 +12,7 @@ struct Provider: TimelineProvider {
     @ObservedObject var messageViewModel = WidgetMessageViewModel()
     
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), model: "missionViewModel")
+        SimpleEntry(date: Date(), model: "message")
     }
 
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
@@ -43,14 +43,7 @@ struct Provider: TimelineProvider {
         completion(timeline)
     }
     
-    
-//    func getData() -> [SimpleEntry]{
-////        self.missionViewModel.fetchDataFromURL()
-//
-//        var entries = [SimpleEntry(date: Date(), model: "Hi this works")]
-//
-//        return entries
-//    }
+
 }
 
 struct SimpleEntry: TimelineEntry {
