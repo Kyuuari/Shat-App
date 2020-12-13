@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		01B6D3EF25849EB600EB5709 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B6D3EE25849EB600EB5709 /* LocationController.swift */; };
 		01BC86AA258052F300105E5C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BC86A9258052F300105E5C /* LocationManager.swift */; };
-		01D8956925813FD200573A09 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D8956825813FD200573A09 /* LocationView.swift */; };
 		01F15C6225620E010030723B /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F15C6125620E010030723B /* UserProfileView.swift */; };
 		01F30B6A255B4C6800145ED6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F30B69255B4C6800145ED6 /* User.swift */; };
 		01F30B6E255B4D8C00145ED6 /* CurrentSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F30B6D255B4D8C00145ED6 /* CurrentSessionViewModel.swift */; };
@@ -97,7 +96,6 @@
 /* Begin PBXFileReference section */
 		01B6D3EE25849EB600EB5709 /* LocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
 		01BC86A9258052F300105E5C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		01D8956825813FD200573A09 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		01F15C6125620E010030723B /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		01F30B69255B4C6800145ED6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		01F30B6D255B4D8C00145ED6 /* CurrentSessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentSessionViewModel.swift; sourceTree = "<group>"; };
@@ -250,7 +248,6 @@
 				E94A2A6025775274004CF050 /* ProfileCell.swift */,
 				E94A2A6325775290004CF050 /* ProfileHeader.swift */,
 				E94A2A6F2578936C004CF050 /* SettingsCell.swift */,
-				01D8956825813FD200573A09 /* LocationView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -505,7 +502,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				01BC86AA258052F300105E5C /* LocationManager.swift in Sources */,
-				01D8956925813FD200573A09 /* LocationView.swift in Sources */,
 				E9799F8D256DA45F007A6B92 /* ContainerView.swift in Sources */,
 				94D0812725804453003868D4 /* WidgetMessage.swift in Sources */,
 				E94A2A5E257751F3004CF050 /* AccountDetailsCell.swift in Sources */,
