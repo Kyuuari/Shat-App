@@ -12,13 +12,15 @@ import FirebaseFirestore
 
 class LocationController: UIViewController, CLLocationManagerDelegate{
     
-    var window: UIWindow?
+//    var window: UIWindow?
     var mapView: MKMapView = MKMapView()
     var locationManager : LocationManager
     let regionRadius: CLLocationDistance = 300
+    var senderMessage: Message
     
-    init(manager: LocationManager){
+    init(manager: LocationManager, message: Message){
         self.locationManager = manager
+        self.senderMessage = message
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -28,17 +30,20 @@ class LocationController: UIViewController, CLLocationManagerDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.window = UIWindow(frame: UIScreen.main.bounds)
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
         self.view.backgroundColor = UIColor.white
         let senderCoordinates = CLLocationCoordinate2D(latitude: self.locationManager.lat, longitude: self.locationManager.lng)
-        print("\(senderCoordinates)")
+        let messageCoordinates = CLLocationCoordinate2D(latitude: self.senderMessage.lat, longitude: self.senderMessage.lng)
         let region = MKCoordinateRegion(center: senderCoordinates, latitudinalMeters: regionRadius * 4.0, longitudinalMeters: regionRadius * 4.0)
         mapView.setRegion(region, animated: true)
         self.mapView = MKMapView(frame: UIScreen.main.bounds)
-        self.locationManager.addPinToMapView(mapView: mapView, coordinates: senderCoordinates, title: "You sent a message to this user from here")
+        self.locationManager.addPinToMapView(mapView: mapView, coordinates: senderCoordinates, title: "You are currently here")
+        self.locationManager.addPinToMapView(mapView: mapView, coordinates: messageCoordinates, title: "Your last message was sent from here")
         self.view.addSubview(self.mapView)
     }
     
-    
-    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        mapView.frame = self.view.bounds
+    }
 }

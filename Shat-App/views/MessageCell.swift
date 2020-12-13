@@ -51,10 +51,10 @@ class MessageCell: UICollectionViewCell {
         super.init(frame: frame)
 
         addSubview(locationButtonView)
-        locationButtonView.anchor(left: leftAnchor, bottom: bottomAnchor,paddingLeft: 8, paddingBottom: -4,paddingRight: 10)
+        locationButtonView.anchor(bottom: bottomAnchor, right: rightAnchor,paddingLeft: 50, paddingBottom: -4,paddingRight: 10)
         
         addSubview(profileImageView)
-        profileImageView.anchor(left: leftAnchor, bottom: bottomAnchor, paddingLeft: 25, paddingBottom: -4)
+        profileImageView.anchor(left: leftAnchor, bottom: bottomAnchor, paddingLeft: 15, paddingBottom: -4)
         profileImageView.setDimensions(height: 32, width: 32)
         profileImageView.layer.cornerRadius = 32 / 2
         
@@ -69,7 +69,7 @@ class MessageCell: UICollectionViewCell {
         bubbleLeftAnchor = bubbleContainer.leftAnchor.constraint(equalTo: profileImageView.rightAnchor, constant: 12)
         bubbleLeftAnchor.isActive = false
 
-        bubbleRightAnchor = bubbleContainer.rightAnchor.constraint(equalTo: rightAnchor, constant: -12)
+        bubbleRightAnchor = bubbleContainer.rightAnchor.constraint(equalTo: locationButtonView.rightAnchor, constant: -12)
         bubbleRightAnchor.isActive = false
 
         bubbleContainer.addSubview(textView)
@@ -97,10 +97,9 @@ class MessageCell: UICollectionViewCell {
         profileImageView.isHidden = viewModel.shouldHideProfileImage
         profileImageView.sd_setImage(with: viewModel.profileImageUrl)
         
-        locationButtonView.isHidden = viewModel.shouldHideProfileImage
+        locationButtonView.isHidden = !viewModel.shouldHideProfileImage
         locationButtonView.isEnabled = true
     }
-    
     
     
 }
