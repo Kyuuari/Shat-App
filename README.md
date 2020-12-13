@@ -71,7 +71,7 @@ We will separate the parts into phases. As of now we will have at least 3 phases
 ## Screenshots
 
 ### Sign In
-<img src="https://user-images.githubusercontent.com/49799250/99713958-f7628780-2a72-11eb-92fa-9d81c1891ec0.png" width="414" height="896">
+<img src="https://cdn.discordapp.com/attachments/634890444953878529/787474907155791882/Screen_Shot_2020-12-12_at_6.56.37_PM.png" width="414" height="896">
 
 ### Sign Up
 <img src="https://user-images.githubusercontent.com/49799250/99713967-f92c4b00-2a72-11eb-979a-2217f80a6382.png" width="414" height="896">
