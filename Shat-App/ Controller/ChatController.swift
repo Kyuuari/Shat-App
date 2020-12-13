@@ -83,7 +83,8 @@ extension ChatController {
     }
     
     @objc func navToLocation(){
-        let controller = LocationController(manager: currLocation)
+        let senderMessages = self.messages
+        let controller = LocationController(manager: currLocation, message: senderMessages[0])
         navigationController?.pushViewController(controller, animated: true)
     }
 }
