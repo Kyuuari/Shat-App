@@ -49,19 +49,19 @@ We will separate the parts into phases. As of now we will have at least 3 phases
 
 ## Phase 2 - Main Functionality:
 
-* Authentication User login ( Login Functionality) - Neil
-* Implement SignUp Functionality- Neil
-* Save instance of currently logged in user to display profile - Neil
-* Create user Profile -Chester
+* Authentication User login ( Login Functionality) - Brendon / Neil
+* Implement SignUp Functionality- Brendon / Neil
+* Save instance of currently logged in user to display profile - Brendon
+* Create user Profile - Brendon
 * Link database with chat room (Chat room functionality) - Brendon 
 * Link database with between User and Chat room ( when created chat room ) - Brendon
 
 ## Phase 3 - Additional Features:
 
-* Added Location Data feature. - Brendon
+* Added Location Data feature. - Neil
 * Polish UI for all interfaces. - Chester
 * WidgetKit - Chester
-* Encrypted Messages. - Neil
+* Encrypted Messages. - Dropped
 * Thai languages - Brendon
 
 ## Phase 4 - Optional Features
@@ -74,14 +74,25 @@ We will separate the parts into phases. As of now we will have at least 3 phases
 <img src="https://cdn.discordapp.com/attachments/634890444953878529/787474907155791882/Screen_Shot_2020-12-12_at_6.56.37_PM.png" width="414" height="896">
 
 ### Sign Up
-<img src="https://user-images.githubusercontent.com/49799250/99713967-f92c4b00-2a72-11eb-979a-2217f80a6382.png" width="414" height="896">
+<img src="https://cdn.discordapp.com/attachments/634890444953878529/787474908157313064/Screen_Shot_2020-12-12_at_6.56.51_PM.png" width="414" height="896">
 
 ### Chat Rooms the user has made
-<img src="https://user-images.githubusercontent.com/49799250/99713972-fc273b80-2a72-11eb-9e70-8ef808fbf01d.png" width="414" height="896">
+<img src="https://cdn.discordapp.com/attachments/634890444953878529/787474895566798868/Screen_Shot_2020-12-12_at_7.04.32_PM.png" width="414" height="896">
 
 ### Chat Room
-<img src="https://user-images.githubusercontent.com/49799250/99713989-021d1c80-2a73-11eb-966b-6b71dd92e834.png" width="414" height="896">
+<img src="https://cdn.discordapp.com/attachments/634890444953878529/787474896774365264/Screen_Shot_2020-12-12_at_7.04.43_PM.png" width="414" height="896">
 
-### User Profile Template
-<img src="https://user-images.githubusercontent.com/49799250/99713981-00535900-2a73-11eb-9c07-8d8cd3b08eac.png" width="414" height="896">
+### Location View
+<img src="https://cdn.discordapp.com/attachments/634890444953878529/787474907466039296/Screen_Shot_2020-12-12_at_7.22.04_PM.png" width="414" height = "896">
 
+### User Profile
+<img src="https://cdn.discordapp.com/attachments/634890444953878529/787474904412585984/Screen_Shot_2020-12-12_at_7.10.55_PM.png" width="414" height="896">
+
+### Edit Profile
+<img src="https://cdn.discordapp.com/attachments/634890444953878529/787474898871779348/Screen_Shot_2020-12-12_at_7.11.00_PM.png" width="414" height="896">
+
+### Settings
+<img src="https://cdn.discordapp.com/attachments/634890444953878529/787474898946752542/Screen_Shot_2020-12-12_at_7.11.05_PM.png" width="414" height="896">
+
+### Widget
+<img src="https://cdn.discordapp.com/attachments/634890444953878529/787474912914833478/Screen_Shot_2020-12-12_at_7.06.33_PM.png" width="414" height="896">
